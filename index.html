@@ -1,0 +1,3243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ==========================================================================
+       SEO & SOCIAL SHARING METADATA
+       ========================================================================== -->
+  <title>Samreen Fayyaz | BS Mathematics Undergraduate & Digital Designer</title>
+  <meta name="description" content="Personal portfolio of Samreen Fayyaz, BS Mathematics undergraduate at BZU Multan, digital designer, and aspiring technologist." />
+  <meta name="author" content="Samreen Fayyaz" />
+  
+  <!-- OpenGraph Social Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Samreen Fayyaz | BS Mathematics Undergraduate & Digital Designer" />
+  <meta property="og:description" content="Personal portfolio of Samreen Fayyaz, BS Mathematics undergraduate at BZU Multan, digital designer, and aspiring technologist." />
+  <meta property="og:site_name" content="Samreen Fayyaz Portfolio" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samreen Fayyaz | BS Mathematics Undergraduate & Digital Designer" />
+  <meta name="twitter:description" content="Personal portfolio of Samreen Fayyaz, BS Mathematics undergraduate at BZU Multan, digital designer, and aspiring technologist." />
+
+  <!-- Google Fonts: Syne (Display) & DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME CONFIGURATION
+       <!-- EDIT HERE: Easily customize palette, fonts, and animation timing -->
+       ========================================================================== */
+    :root {
+      /* Deep space color palette requested by user */
+      --bg-primary: #0B1026;         /* Deep space navy */
+      --bg-secondary: #131A3E;       /* Elevated navy for card backdrops */
+      --bg-card: rgba(19, 26, 62, 0.65); /* Glassmorphic card surface */
+      --bg-card-hover: rgba(27, 37, 88, 0.85);
+      --border-card: rgba(255, 255, 255, 0.09);
+      --border-card-hover: rgba(124, 58, 237, 0.45);
+      
+      /* Accent colors */
+      --accent-violet: #7C3AED;      /* Electric violet */
+      --accent-orange: #FF8A3D;      /* Sunset orange */
+      --accent-teal: #2DD4BF;        /* Aqua teal */
+      --accent-glow: #8B5CF6;        /* Subtle violet glow */
+      
+      /* Text colors */
+      --text-primary: #FFF7ED;       /* Soft cream on dark */
+      --text-secondary: #CBD5E1;     /* Soft slate */
+      --text-muted: #94A3B8;         /* Muted info */
+      --text-dim: #64748B;
+      
+      /* Glowing shadows */
+      --glow-violet: 0 0 25px rgba(124, 58, 237, 0.35);
+      --glow-orange: 0 0 25px rgba(255, 138, 61, 0.35);
+      --glow-teal: 0 0 25px rgba(45, 212, 191, 0.35);
+      
+      /* Typography */
+      --font-heading: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Layout & Radius */
+      --max-width: 1140px;
+      --nav-height: 74px;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      
+      /* Transitions */
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: 0.2s ease;
+      --transition-normal: 0.35s var(--ease-smooth);
+    }
+
+    /* Light Mode Variables (persists user preference) */
+    [data-theme="light"] {
+      --bg-primary: #F8FAFC;         /* Crisp soft light backdrop */
+      --bg-secondary: #FFFFFF;
+      --bg-card: rgba(255, 255, 255, 0.88);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --border-card: rgba(15, 23, 42, 0.08);
+      --border-card-hover: rgba(124, 58, 237, 0.3);
+      
+      --accent-violet: #6D28D9;
+      --accent-orange: #EA580C;
+      --accent-teal: #0D9488;
+      
+      --text-primary: #0F172A;       /* Deep slate/navy text */
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --text-dim: #94A3B8;
+      
+      --glow-violet: 0 10px 25px rgba(109, 40, 217, 0.15);
+      --glow-orange: 0 10px 25px rgba(234, 88, 12, 0.15);
+      --glow-teal: 0 10px 25px rgba(13, 148, 136, 0.15);
+    }
+
+    /* ==========================================================================
+       RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+      transition: background-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+    }
+
+    /* Subtle Celestial Starfield & Mathematical Coordinate Grid Background */
+    .space-background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .starfield {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(1.5px 1.5px at 40px 60px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 150px 230px, rgba(45,212,191,0.8), transparent),
+        radial-gradient(1.5px 1.5px at 280px 120px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 420px 380px, rgba(255,138,61,0.7), transparent),
+        radial-gradient(1px 1px at 580px 180px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1.5px 1.5px at 730px 490px, rgba(124,58,237,0.7), transparent),
+        radial-gradient(1px 1px at 890px 260px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 1040px 110px, rgba(45,212,191,0.8), transparent),
+        radial-gradient(1.5px 1.5px at 1190px 420px, rgba(255,255,255,0.7), transparent);
+      background-size: 1200px 650px;
+      opacity: 0.8;
+      animation: starTwinkle 16s ease-in-out infinite alternate;
+    }
+
+    [data-theme="light"] .starfield {
+      opacity: 0.25;
+    }
+
+    /* Ambient Nebulae */
+    .nebula-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      opacity: 0.18;
+      transition: opacity 0.4s ease;
+    }
+    .nebula-1 {
+      top: -100px;
+      right: -100px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, var(--accent-violet) 0%, transparent 70%);
+    }
+    .nebula-2 {
+      top: 40%;
+      left: -150px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-teal) 0%, transparent 70%);
+    }
+    .nebula-3 {
+      bottom: 5%;
+      right: 5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--accent-orange) 0%, transparent 70%);
+    }
+
+    /* Accessible Focus States */
+    :focus-visible {
+      outline: 2px solid var(--accent-teal);
+      outline-offset: 3px;
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4, h5 {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    p {
+      max-width: 65ch; /* Comfortable reading length under 70 characters */
+      color: var(--text-secondary);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    /* Gradient Text Utility */
+    .text-gradient {
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #F43F5E 40%, var(--accent-violet) 80%, var(--accent-teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .text-cosmic {
+      background: linear-gradient(135deg, #FFF7ED 20%, var(--accent-teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    [data-theme="light"] .text-cosmic {
+      background: linear-gradient(135deg, #0F172A 30%, var(--accent-violet) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 3.5rem 0;
+      }
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-kicker::before,
+    .section-kicker::after {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--accent-teal);
+      opacity: 0.7;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.65rem;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      white-space: nowrap;
+      min-height: 46px; /* Touch target minimum */
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #EA580C 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(255, 138, 61, 0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 138, 61, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(124, 58, 237, 0.12);
+      border-color: rgba(124, 58, 237, 0.4);
+      color: var(--text-primary);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      background: rgba(124, 58, 237, 0.25);
+      border-color: var(--accent-violet);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border-card);
+      color: var(--text-secondary);
+    }
+    .btn-outline:hover {
+      background: var(--bg-card);
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       1. STICKY GLASS NAVBAR
+       ========================================================================== */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: var(--nav-height);
+      background: rgba(11, 16, 38, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      z-index: 100;
+      transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    [data-theme="light"] .site-nav {
+      background: rgba(248, 250, 252, 0.85);
+    }
+
+    .nav-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo SF Initials */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-violet) 0%, var(--accent-teal) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.05em;
+      position: relative;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+    }
+
+    .logo-badge::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 14px;
+      border: 1px dashed rgba(255, 255, 255, 0.3);
+      animation: spinOrbit 20s linear infinite;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .brand-tag {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--accent-teal);
+      letter-spacing: 0.05em;
+    }
+
+    /* Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-violet), var(--accent-teal));
+      transition: width var(--transition-fast);
+      border-radius: 2px;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Actions: Theme Toggle & Hamburger */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .theme-toggle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--accent-violet);
+      color: var(--accent-teal);
+      transform: scale(1.05);
+    }
+
+    .theme-icon {
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hamburger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 40px;
+      height: 40px;
+      padding: 9px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      cursor: pointer;
+      z-index: 102;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-primary);
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      inset-inline: 0;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-card);
+      padding: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      z-index: 99;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.35s var(--ease-smooth), opacity 0.35s ease;
+    }
+
+    .mobile-menu.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: block;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .nav-cta-btn {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      align-items: center;
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3.5rem;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-meta-row {
+        justify-content: center;
+      }
+      p.hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--accent-teal);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      box-shadow: 0 0 10px var(--accent-teal);
+      animation: pulseGlow 2s infinite;
+    }
+
+    .hero-title {
+      font-size: clamp(2.75rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-typing-wrapper {
+      font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 2.2rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-typing-wrapper {
+        justify-content: center;
+      }
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.3em;
+      background-color: var(--accent-orange);
+      animation: cursorBlink 0.9s infinite;
+      vertical-align: middle;
+    }
+
+    .hero-tagline {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+    }
+
+    .meta-separator {
+      color: var(--accent-violet);
+      font-weight: bold;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Mathematical Space Orb Animation (NO stock photos) */
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .celestial-stage {
+      position: relative;
+      width: 380px;
+      height: 380px;
+      max-width: 100%;
+    }
+
+    .celestial-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #FFF7ED 0%, var(--accent-violet) 50%, var(--bg-primary) 100%);
+      box-shadow: 0 0 45px var(--accent-violet), inset 0 0 15px rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+
+    .core-symbol {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    /* Orbital Rings */
+    .orbit-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .orbit-1 {
+      width: 200px;
+      height: 200px;
+      border-color: rgba(45, 212, 191, 0.35);
+      animation: spinClockwise 16s linear infinite;
+    }
+
+    .orbit-2 {
+      width: 290px;
+      height: 290px;
+      border: 1px dashed rgba(124, 58, 237, 0.4);
+      animation: spinCounterClockwise 26s linear infinite;
+    }
+
+    .orbit-3 {
+      width: 370px;
+      height: 370px;
+      border-color: rgba(255, 138, 61, 0.3);
+      animation: spinClockwise 38s linear infinite;
+    }
+
+    /* Orbiting Math Bodies */
+    .orbital-body {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      pointer-events: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .orbital-body:hover {
+      transform: scale(1.3);
+      z-index: 10;
+    }
+
+    .body-teal {
+      top: -17px;
+      left: calc(50% - 17px);
+      color: var(--accent-teal);
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 16px var(--accent-teal);
+    }
+
+    .body-violet {
+      bottom: -17px;
+      left: calc(50% - 17px);
+      color: #C084FC;
+      border-color: var(--accent-violet);
+      box-shadow: 0 0 18px var(--accent-violet);
+    }
+
+    .body-orange {
+      top: calc(50% - 17px);
+      right: -17px;
+      color: var(--accent-orange);
+      border-color: var(--accent-orange);
+      box-shadow: 0 0 18px var(--accent-orange);
+    }
+
+    .body-math-4 {
+      top: calc(50% - 17px);
+      left: -17px;
+      color: #38BDF8;
+      border-color: #38BDF8;
+    }
+
+    /* Floating Mathematical Formula Particles */
+    .math-glyph-float {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: rgba(255, 247, 237, 0.35);
+      user-select: none;
+      pointer-events: none;
+      animation: floatGlyph 8s ease-in-out infinite alternate;
+    }
+
+    [data-theme="light"] .math-glyph-float {
+      color: rgba(15, 23, 42, 0.35);
+    }
+
+    .glyph-1 { top: 10%; right: 12%; animation-delay: 0s; }
+    .glyph-2 { bottom: 15%; left: 8%; animation-delay: 1.5s; }
+    .glyph-3 { top: 25%; left: 5%; animation-delay: 3s; }
+    .glyph-4 { bottom: 20%; right: 10%; animation-delay: 4.5s; }
+
+    /* ==========================================================================
+       3. ABOUT ME SECTION
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.3fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .profile-photo-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Organic Blob / Geometric Container */
+    .profile-organic-shape {
+      width: 320px;
+      height: 340px;
+      max-width: 100%;
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      background: linear-gradient(145deg, rgba(124, 58, 237, 0.25) 0%, rgba(45, 212, 191, 0.15) 100%);
+      border: 2px solid var(--border-card-hover);
+      box-shadow: var(--glow-violet);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      animation: morphBlob 12s ease-in-out infinite alternate;
+    }
+
+    .profile-organic-shape:hover {
+      border-color: var(--accent-orange);
+      box-shadow: var(--glow-orange);
+    }
+
+    .profile-image-elem {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Stylized Avatar Placeholder fallback (shows when image not found) */
+    .profile-avatar-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .avatar-icon-ring {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-violet) 0%, var(--accent-orange) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+    }
+
+    .avatar-caption {
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      color: var(--accent-teal);
+    }
+
+    /* About Details */
+    .about-content-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .objective-lead {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    /* 4 Quick-Fact Cards */
+    .quick-facts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .quick-facts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.4rem;
+      backdrop-filter: blur(12px);
+      transition: all var(--transition-normal);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .fact-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-teal);
+      background: var(--bg-card-hover);
+      box-shadow: var(--glow-teal);
+    }
+
+    .fact-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(45, 212, 191, 0.12);
+      color: var(--accent-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fact-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+      font-family: var(--font-mono);
+    }
+
+    .fact-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .fact-sub {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 0.15rem;
+    }
+
+    /* ==========================================================================
+       4. SKILLS SECTION
+       ========================================================================== */
+    .skills-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 980px) {
+      .skills-categories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-category-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-violet), var(--accent-teal));
+      opacity: 0.6;
+    }
+
+    .skill-category-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-card-hover);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .icon-violet {
+      background: linear-gradient(135deg, var(--accent-violet) 0%, #9333EA 100%);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+    }
+
+    .icon-orange {
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #F97316 100%);
+      box-shadow: 0 4px 12px rgba(255, 138, 61, 0.35);
+    }
+
+    .icon-teal {
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #0D9488 100%);
+      box-shadow: 0 4px 12px rgba(45, 212, 191, 0.35);
+    }
+
+    .category-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .category-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .skill-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.92rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .skill-level-text {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-teal);
+    }
+
+    .skill-bar-track {
+      width: 100%;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+    }
+
+    [data-theme="light"] .skill-bar-track {
+      background: rgba(15, 23, 42, 0.08);
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(90deg, var(--accent-violet) 0%, var(--accent-teal) 100%);
+      width: 0%;
+      transition: width 1.2s var(--ease-smooth);
+    }
+
+    .skill-bar-fill.fill-orange {
+      background: linear-gradient(90deg, var(--accent-orange) 0%, #F59E0B 100%);
+    }
+
+    .skill-detail-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Strengths List Style */
+    .strengths-feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .strength-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .strength-check-icon {
+      color: var(--accent-teal);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    /* ==========================================================================
+       5. EDUCATION SECTION (Vertical Timeline)
+       ========================================================================== */
+    .timeline-container {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+      padding-left: 2.5rem;
+    }
+
+    /* Glowing vertical spine */
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 20px;
+      left: 11px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-violet) 0%, var(--accent-teal) 60%, transparent 100%);
+      opacity: 0.5;
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 2.75rem;
+    }
+
+    .timeline-node:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Node Marker */
+    .timeline-marker {
+      position: absolute;
+      left: -2.5rem;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-teal);
+      box-shadow: 0 0 14px var(--accent-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .timeline-node:nth-child(2) .timeline-marker {
+      border-color: var(--accent-violet);
+      box-shadow: 0 0 14px var(--accent-violet);
+    }
+
+    .timeline-node:nth-child(3) .timeline-marker {
+      border-color: var(--accent-orange);
+      box-shadow: 0 0 14px var(--accent-orange);
+    }
+
+    .timeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 2rem;
+      backdrop-filter: blur(12px);
+      transition: all var(--transition-normal);
+    }
+
+    .timeline-card:hover {
+      transform: translateX(6px);
+      border-color: var(--accent-teal);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-degree {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .timeline-status {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-teal);
+      letter-spacing: 0.04em;
+    }
+
+    .timeline-institution {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent-orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       6. DESIGN WORK (Projects & John Young Poster)
+       ========================================================================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 2.25rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(12px);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-violet);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+    }
+
+    .poster-thumbnail-wrapper {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #060919;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poster-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s var(--ease-smooth);
+    }
+
+    .poster-thumbnail-wrapper:hover .poster-image {
+      transform: scale(1.04);
+    }
+
+    .poster-zoom-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 16, 38, 0.55);
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      color: #FFFFFF;
+    }
+
+    .poster-thumbnail-wrapper:hover .poster-zoom-overlay {
+      opacity: 1;
+    }
+
+    .zoom-badge {
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius-full);
+      background: var(--accent-orange);
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 16px rgba(255, 138, 61, 0.4);
+    }
+
+    .project-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 1.25rem;
+    }
+
+    .project-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      color: var(--accent-teal);
+    }
+
+    .project-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* "More Coming Soon" Card */
+    .coming-soon-card {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-soon-card:hover {
+      border-color: var(--accent-teal);
+      border-style: solid;
+      transform: translateY(-4px);
+    }
+
+    .radar-orbit-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px dashed var(--accent-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      color: var(--accent-teal);
+      animation: spinOrbit 14s linear infinite;
+    }
+
+    .radar-orbit-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-orange);
+      top: 5px;
+      right: 5px;
+      box-shadow: 0 0 10px var(--accent-orange);
+    }
+
+    /* ==========================================================================
+       7. OPEN TO OPPORTUNITIES CARD
+       ========================================================================== */
+    .opportunities-section {
+      padding: 2rem 0 4rem;
+    }
+
+    .opportunity-card {
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.16) 0%, rgba(19, 26, 62, 0.8) 50%, rgba(45, 212, 191, 0.14) 100%);
+      border: 1px solid rgba(124, 58, 237, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .opportunity-card {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+      .opportunity-actions {
+        justify-content: center;
+      }
+      .opportunity-highlights {
+        justify-content: center;
+      }
+    }
+
+    .opportunity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent-orange);
+      margin-bottom: 1rem;
+    }
+
+    .opportunity-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .opportunity-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .opportunity-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .opportunity-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Decorative Math Constellation inside Opportunity card */
+    .opportunity-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .constellation-box {
+      width: 220px;
+      height: 220px;
+      position: relative;
+      border-radius: 50%;
+      border: 1px dashed rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       8. CONTACT SECTION
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* Contact Info Cards */
+    .contact-info-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-channel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-channel-card:hover {
+      transform: translateX(6px);
+      border-color: var(--accent-orange);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .channel-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(255, 138, 61, 0.12);
+      color: var(--accent-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+
+    .contact-channel-card:hover .channel-icon {
+      background: var(--accent-orange);
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+
+    .channel-label {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .channel-value {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      word-break: break-word;
+    }
+
+    /* References Note */
+    .references-line {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 0.5rem 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Contact Form */
+    .contact-form-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: rgba(11, 16, 38, 0.6);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+    }
+
+    [data-theme="light"] .form-input,
+    [data-theme="light"] .form-textarea {
+      background: #FFFFFF;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 14px rgba(45, 212, 191, 0.25);
+    }
+
+    .form-textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-status-msg {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      display: none;
+    }
+
+    .form-status-msg.success {
+      display: block;
+      background: rgba(45, 212, 191, 0.15);
+      border: 1px solid var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    /* ==========================================================================
+       9. FOOTER
+       ========================================================================== */
+    .site-footer {
+      border-top: 1px solid var(--border-card);
+      padding: 3rem 0;
+      background: rgba(11, 16, 38, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    [data-theme="light"] .site-footer {
+      background: #FFFFFF;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-copy {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .back-to-top-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      font-family: var(--font-mono);
+      color: var(--accent-teal);
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: transform var(--transition-fast);
+    }
+
+    .back-to-top-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       10. LIGHTBOX MODAL (For John Young Poster)
+       ========================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 10, 25, 0.95);
+      backdrop-filter: blur(18px);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-modal.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+    }
+
+    .lightbox-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .lightbox-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .lb-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      border-radius: var(--radius-sm);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .lb-btn:hover {
+      background: var(--accent-orange);
+      border-color: var(--accent-orange);
+    }
+
+    .lightbox-canvas-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      padding: 1.5rem;
+      cursor: grab;
+      position: relative;
+    }
+
+    .lightbox-canvas-area:active {
+      cursor: grabbing;
+    }
+
+    .lightbox-full-img {
+      max-width: 90vw;
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease;
+      transform-origin: center center;
+    }
+
+    /* Fallback visual inside lightbox if image file is not yet placed */
+    .lightbox-svg-fallback {
+      max-width: 850px;
+      width: 100%;
+      background: #0B1026;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      color: #FFF7ED;
+      display: none; /* activated if img fails */
+    }
+
+    /* ==========================================================================
+       11. RESUME MODAL / VIEW CV
+       ========================================================================== */
+    .resume-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 16, 38, 0.88);
+      backdrop-filter: blur(14px);
+      z-index: 210;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .resume-modal.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .resume-dialog {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .resume-dialog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .resume-dialog-body {
+      padding: 2rem;
+      overflow-y: auto;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .resume-dialog-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 1rem 1.75rem;
+      border-top: 1px solid var(--border-card);
+      background: rgba(0,0,0,0.15);
+    }
+
+    /* ==========================================================================
+       ANIMATIONS
+       ========================================================================== */
+    @keyframes starTwinkle {
+      0% { opacity: 0.65; transform: scale(1); }
+      100% { opacity: 0.9; transform: scale(1.02); }
+    }
+
+    @keyframes spinClockwise {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes spinCounterClockwise {
+      from { transform: translate(-50%, -50%) rotate(360deg); }
+      to { transform: translate(-50%, -50%) rotate(0deg); }
+    }
+
+    @keyframes spinOrbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes floatGlyph {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-12px) rotate(5deg); }
+    }
+
+    @keyframes morphBlob {
+      0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+      50% { border-radius: 55% 45% 35% 65% / 50% 60% 40% 50%; }
+      100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+    }
+
+    /* Scroll Reveal helper */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Reduced Motion Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .starfield {
+        animation: none;
+      }
+      .orbit-1, .orbit-2, .orbit-3 {
+        animation: none;
+      }
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+      }
+      .site-nav, .space-background, .nebula-glow, .hero-actions, .contact-form-box, .lightbox-modal, .back-to-top-btn {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .timeline-card, .skill-category-card, .project-card, .fact-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: #FFFFFF !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       COSMIC BACKGROUND
+       ========================================================================== -->
+  <div class="space-background" aria-hidden="true">
+    <div class="starfield"></div>
+    <div class="nebula-glow nebula-1"></div>
+    <div class="nebula-glow nebula-2"></div>
+    <div class="nebula-glow nebula-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+       1. STICKY GLASS NAVBAR
+       ========================================================================== -->
+  <header class="site-nav" id="top">
+    <div class="container nav-container">
+      <!-- Initials Logo "SF" -->
+      <a href="#top" class="brand-logo" aria-label="Samreen Fayyaz Home">
+        <div class="logo-badge" aria-hidden="true">SF</div>
+        <div class="brand-text">
+          <span class="brand-name">Samreen Fayyaz</span>
+          <span class="brand-tag">BS Mathematics · BZU</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg id="themeIcon" class="theme-icon" viewBox="0 0 24 24">
+            <!-- Sun / Moon will be rendered by JS -->
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary nav-cta-btn" style="padding: 0.55rem 1.25rem; font-size: 0.88rem;">
+          Get in Touch
+        </a>
+
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="mobile-menu" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-link">About Me</a></li>
+        <li><a href="#skills" class="mobile-link">Skills & Tools</a></li>
+        <li><a href="#education" class="mobile-link">Education Timeline</a></li>
+        <li><a href="#projects" class="mobile-link">Design Work & Projects</a></li>
+        <li><a href="#opportunities" class="mobile-link">Open to Opportunities</a></li>
+        <li><a href="#contact" class="mobile-link">Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-text-col">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span>
+            <span>BS Mathematics Undergraduate · Entry-Level Candidate</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Samreen Fayyaz</span>
+          </h1>
+
+          <div class="hero-typing-wrapper" aria-live="polite">
+            <span>I am a </span>
+            <span id="typingTarget" class="text-cosmic" style="font-weight: 700;">Mathematics Student</span>
+            <span class="typing-cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-tagline">
+            Motivated and hardworking undergraduate at Bahauddin Zakariya University (BZU), Multan.
+            Bridging analytical thinking with creative digital design, with an eagerness to learn new tools and solve real-world problems.
+          </p>
+
+          <div class="hero-meta-row">
+            <span>Bahauddin Zakariya University, Multan</span>
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span>Urdu & English</span>
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span>Digital Design & Problem Solving</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Contact Me
+            </a>
+            <button id="downloadCvBtn" class="btn btn-outline" type="button" aria-haspopup="dialog">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download CV
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Orbiting Planets & Math Glyphs (No Stock Photos) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="celestial-stage">
+            <!-- Center Core -->
+            <div class="celestial-core" title="Mathematical Core">
+              <span class="core-symbol">π</span>
+            </div>
+
+            <!-- Orbit 1 (Teal) -->
+            <div class="orbit-ring orbit-1">
+              <div class="orbital-body body-teal" title="Integral">∫</div>
+            </div>
+
+            <!-- Orbit 2 (Violet) -->
+            <div class="orbit-ring orbit-2">
+              <div class="orbital-body body-violet" title="Summation">∑</div>
+              <div class="orbital-body body-math-4" title="Square Root">√</div>
+            </div>
+
+            <!-- Orbit 3 (Orange) -->
+            <div class="orbit-ring orbit-3">
+              <div class="orbital-body body-orange" title="Infinity">∞</div>
+            </div>
+
+            <!-- Floating math particles -->
+            <span class="math-glyph-float glyph-1">f(x) = dx</span>
+            <span class="math-glyph-float glyph-2">e<sup>iπ</sup> + 1 = 0</span>
+            <span class="math-glyph-float glyph-3">Δy / Δx</span>
+            <span class="math-glyph-float glyph-4">v = √(2GM/r)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Profile & Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Dedicated mathematics student applying logical reasoning and creative flair.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Creative Organic Shape Profile Container -->
+          <div class="profile-photo-wrapper">
+            <!-- EDIT HERE: To use your personal photo, place it in images/profile.jpg and set src="images/profile.jpg" below. -->
+            <div class="profile-organic-shape">
+              <!-- If profile.jpg exists, it displays here. Otherwise, the fallback avatar renders cleanly. -->
+              <img 
+                src="images/profile.jpg" 
+                alt="Samreen Fayyaz profile photo" 
+                class="profile-image-elem"
+                id="profilePhotoImg"
+                onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';"
+              />
+              
+              <div class="profile-avatar-fallback" id="avatarFallback">
+                <div class="avatar-icon-ring" aria-hidden="true">SF</div>
+                <div style="font-weight: 700; font-size: 1.15rem; margin-bottom: 0.25rem;">Samreen Fayyaz</div>
+                <div class="avatar-caption">BS Mathematics · Digital Design</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; max-width: 200px;">
+                  <!-- EDIT HERE: replace with your photo (e.g. images/profile.jpg) -->
+                  (Custom photo placeholder)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Career Objective & Quick Facts -->
+          <div class="about-content-box">
+            <div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--accent-orange);">Career Objective</h3>
+              <p class="objective-lead">
+                Motivated and hardworking BS Mathematics undergraduate seeking an entry-level opportunity to apply analytical thinking, strengthen practical skills, and gain professional experience. Interested in mathematics, programming, and digital design, with a willingness to learn new tools and contribute positively to a team.
+              </p>
+            </div>
+
+            <!-- 4 Quick-Fact Cards -->
+            <div class="quick-facts-grid">
+              <!-- Fact 1 -->
+              <div class="fact-card">
+                <div class="fact-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+                </div>
+                <div>
+                  <div class="fact-title">Academic Degree</div>
+                  <div class="fact-value">BS Mathematics</div>
+                  <div class="fact-sub">Undergraduate (Studying)</div>
+                </div>
+              </div>
+
+              <!-- Fact 2 -->
+              <div class="fact-card">
+                <div class="fact-icon-box" aria-hidden="true" style="color: var(--accent-violet); background: rgba(124,58,237,0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div>
+                  <div class="fact-title">Institution</div>
+                  <div class="fact-value">BZU, Multan</div>
+                  <div class="fact-sub">Bahauddin Zakariya Univ.</div>
+                </div>
+              </div>
+
+              <!-- Fact 3 -->
+              <div class="fact-card">
+                <div class="fact-icon-box" aria-hidden="true" style="color: var(--accent-orange); background: rgba(255,138,61,0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                </div>
+                <div>
+                  <div class="fact-title">Languages</div>
+                  <div class="fact-value">Urdu & English</div>
+                  <div class="fact-sub">Bilingual communication</div>
+                </div>
+              </div>
+
+              <!-- Fact 4 -->
+              <div class="fact-card">
+                <div class="fact-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div>
+                  <div class="fact-title">Work Ethic</div>
+                  <div class="fact-value">Quick Learner</div>
+                  <div class="fact-sub">Problem-solving mindset</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SKILLS SECTION
+         ========================================================================== -->
+    <section id="skills" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Core Capabilities</span>
+          <h2 class="section-title">Skills & Knowledge</h2>
+          <p class="section-subtitle">Honest self-assessment covering design creativity, technical learning, and personal strengths.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Group 1: Design -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-violet">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Digital Design</h3>
+                <span class="category-desc">Visual Layouts & Enhancement</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Canva & Digital Design</span>
+                  <span class="skill-level-text">Proficient</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-progress="80"></div>
+                </div>
+                <span class="skill-detail-sub">Create posters, social media posts and simple visual designs</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Photo Editing</span>
+                  <span class="skill-level-text">Basic</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-progress="65"></div>
+                </div>
+                <span class="skill-detail-sub">Basic photo editing and visual enhancement</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2: Tech & Computing -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-orange">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Tech & Computing</h3>
+                <span class="category-desc">Tools & Programming Fundamentals</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Python Programming</span>
+                  <span class="skill-level-text">Beginner (Self-Learning)</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill fill-orange" data-progress="35"></div>
+                </div>
+                <span class="skill-detail-sub">Beginner, currently learning independently</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">MS Word & Docs</span>
+                  <span class="skill-level-text">Beginner</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill fill-orange" data-progress="55"></div>
+                </div>
+                <span class="skill-detail-sub">Beginner-level document creation and formatting</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Computer Skills</span>
+                  <span class="skill-level-text">Foundational</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill fill-orange" data-progress="70"></div>
+                </div>
+                <span class="skill-detail-sub">Basic computer use, problem-solving, willingness to learn new tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3: Personal Strengths -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Personal Strengths</h3>
+                <span class="category-desc">Mindset & Collaborative Values</span>
+              </div>
+            </div>
+
+            <ul class="strengths-feature-list">
+              <li class="strength-feature-item">
+                <svg class="strength-check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Hardworking & Responsible:</strong> Committed to completing duties diligently and reliably.</span>
+              </li>
+              <li class="strength-feature-item">
+                <svg class="strength-check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Quick Learner:</strong> Able to absorb new software, instructions, and workflows rapidly.</span>
+              </li>
+              <li class="strength-feature-item">
+                <svg class="strength-check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Problem-Solving Mindset:</strong> Analytical approach grounded in mathematical reasoning.</span>
+              </li>
+              <li class="strength-feature-item">
+                <svg class="strength-check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Eager to Grow:</strong> Keen enthusiasm for developing new skills and contributing to team goals.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. EDUCATION SECTION (Vertical Timeline)
+         ========================================================================== -->
+    <section id="education" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Academic Journey</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Chronological academic progression in mathematics and secondary education.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Node 1: BS Mathematics -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-degree">BS Mathematics</h3>
+                <span class="timeline-status">Currently Studying · Undergraduate</span>
+              </div>
+              <div class="timeline-institution">Bahauddin Zakariya University (BZU), Multan</div>
+              <p class="timeline-desc">
+                Engaged in advanced undergraduate studies encompassing calculus, algebra, analytical methods, mathematical modelling, and numerical problem solving.
+              </p>
+              <!-- EDIT HERE: year / session (e.g., 2022 – Present) -->
+              <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); margin-top: 0.5rem;">
+                Status: In Progress
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Node 2: Intermediate -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-degree">Intermediate (Higher Secondary Education)</h3>
+                <span class="timeline-status" style="color: var(--accent-violet);">Completed</span>
+              </div>
+              <!-- EDIT HERE: institute name & board (e.g., Govt. College / BISE Multan) -->
+              <div class="timeline-institution" style="color: var(--accent-violet);">Higher Secondary Education</div>
+              <p class="timeline-desc">
+                Successfully completed higher secondary education with strong foundational coursework in science and mathematics.
+              </p>
+              <!-- EDIT HERE: year / institute details -->
+              <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); margin-top: 0.5rem;">
+                Status: Completed
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Node 3: Matriculation -->
+          <div class="timeline-node">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-degree">Matriculation (Secondary School Education)</h3>
+                <span class="timeline-status" style="color: var(--accent-orange);">Completed</span>
+              </div>
+              <!-- EDIT HERE: school name & board -->
+              <div class="timeline-institution" style="color: var(--accent-orange);">Secondary School Education</div>
+              <p class="timeline-desc">
+                Completed secondary school education with science subjects, fostering an early passion for analytical subjects.
+              </p>
+              <!-- EDIT HERE: year / institute details -->
+              <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); margin-top: 0.5rem;">
+                Status: Completed
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. DESIGN WORK / FEATURED PROJECT
+         ========================================================================== -->
+    <section id="projects" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Portfolio Showcase</span>
+          <h2 class="section-title">Design Work & Projects</h2>
+          <p class="section-subtitle">Visual communication combining Canva design with mathematical concepts.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Featured Work: John Young Infographic Poster -->
+          <div class="project-card">
+            <!-- Thumbnail with click-to-zoom -->
+            <!-- EDIT HERE: Place your john-young-infographic.jpg inside the images/ folder -->
+            <div class="poster-thumbnail-wrapper" id="openPosterLightbox" role="button" tabindex="0" aria-label="Open John Young Infographic Lightbox">
+              <img 
+                src="images/john-young-infographic.jpg" 
+                alt="John Young: A Pioneer in Space Exploration - Mathematics: The Key to Successful Missions infographic poster" 
+                class="poster-image"
+                id="posterThumbImg"
+                onerror="this.src='https://placehold.co/900x1800/0B1026/2DD4BF?text=John+Young:+A+Pioneer+in+Space+Exploration%0A%0AMathematics:+The+Key+to+Successful+Missions%0A(Click+to+Enlarge+and+View+Poster)';"
+              />
+              <div class="poster-zoom-overlay">
+                <div class="zoom-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Click to Zoom & View Full Poster
+                </div>
+                <span style="font-size: 0.85rem; color: #E2E8F0;">Created in Canva by Samreen Fayyaz</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Featured Project</span>
+                <span aria-hidden="true">·</span>
+                <span>Canva Design</span>
+                <span aria-hidden="true">·</span>
+                <span>Space & Mathematics Infographic</span>
+              </div>
+
+              <h3 class="project-title">
+                John Young: A Pioneer in Space Exploration — Mathematics: The Key to Successful Missions
+              </h3>
+
+              <p class="project-desc">
+                An educational infographic poster designed from scratch in Canva. It highlights the legendary NASA astronaut John Young across Gemini, Apollo 16, and the Space Shuttle Columbia missions, demonstrating how mathematical formulas (speed, escape velocity, Newton’s 2nd law, fuel usage, and orbital mechanics) enabled safe space voyages.
+              </p>
+
+              <div class="project-tags">
+                <span>Tools: Canva</span>
+                <span aria-hidden="true">·</span>
+                <span>Data Visualization</span>
+                <span aria-hidden="true">·</span>
+                <span>STEM Education</span>
+                <span aria-hidden="true">·</span>
+                <span>Graphic Hierarchy</span>
+              </div>
+
+              <div style="margin-top: 0.5rem;">
+                <button type="button" class="btn btn-primary" id="openPosterBtn" style="font-size: 0.88rem; padding: 0.65rem 1.4rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  View Full Infographic
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: More Projects Coming Soon -->
+          <div class="coming-soon-card">
+            <div class="radar-orbit-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+            </div>
+
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">
+              More Projects Coming Soon
+            </h3>
+
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Currently learning Python independently and working on new mathematical visual designs, data infographics, and code experiments. Check back soon for updates!
+            </p>
+
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-teal);">
+              [ Python Mini-Projects in Progress ]
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. OPEN TO OPPORTUNITIES CARD
+         ========================================================================== -->
+    <section id="opportunities" class="opportunities-section reveal-on-scroll">
+      <div class="container">
+        <div class="opportunity-card">
+          <div class="opportunity-info">
+            <div class="opportunity-badge">
+              <span class="pulse-dot" style="background: var(--accent-orange); box-shadow: 0 0 10px var(--accent-orange);"></span>
+              <span>Available for Work & Training</span>
+            </div>
+
+            <h2 class="opportunity-title">
+              Open to Opportunities
+            </h2>
+
+            <p class="opportunity-desc">
+              I am actively looking for <strong>internships</strong>, <strong>part-time positions</strong>, and <strong>entry-level opportunities</strong>. As a BS Mathematics undergraduate with a passion for analytical problem-solving and digital design, I am eager to contribute fresh energy, learn rapidly from experienced teams, and strengthen my professional skills.
+            </p>
+
+            <div class="opportunity-highlights">
+              <span>Internships & Part-time</span>
+              <span aria-hidden="true">·</span>
+              <span>Entry-Level Roles</span>
+              <span aria-hidden="true">·</span>
+              <span>Remote or Multan On-site</span>
+              <span aria-hidden="true">·</span>
+              <span>Immediate Availability</span>
+            </div>
+
+            <div class="opportunity-actions">
+              <a href="#contact" class="btn btn-primary">
+                Let's Discuss Opportunities
+              </a>
+              <button id="viewCvAltBtn" class="btn btn-outline" type="button">
+                View Resume Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Decorative orbital emblem -->
+          <div class="opportunity-visual" aria-hidden="true">
+            <div class="constellation-box">
+              <div style="text-align: center;">
+                <div style="font-size: 2.2rem; font-family: var(--font-heading); font-weight: 800; color: var(--accent-teal); line-height: 1;">
+                  2026
+                </div>
+                <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); margin-top: 0.3rem;">
+                  Ready to Start
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Get in Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Reach out for internships, entry-level opportunities, or collaborative inquiries.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details Cards -->
+          <div class="contact-info-column">
+            <!-- Phone Card -->
+            <a href="tel:03249335633" class="contact-channel-card" title="Call Samreen Fayyaz">
+              <div class="channel-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">Phone</div>
+                <div class="channel-value">0324 9335633</div>
+              </div>
+            </a>
+
+            <!-- Email Card -->
+            <a href="mailto:samreenfayyaz82@gmail.com" class="contact-channel-card" title="Email Samreen Fayyaz">
+              <div class="channel-icon" aria-hidden="true" style="color: var(--accent-violet); background: rgba(124,58,237,0.12);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">Email</div>
+                <div class="channel-value">samreenfayyaz82@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Location Card -->
+            <div class="contact-channel-card" style="cursor: default;">
+              <div class="channel-icon" aria-hidden="true" style="color: var(--accent-teal); background: rgba(45,212,191,0.12);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">Location / Address</div>
+                <div class="channel-value">Chungi No. 5, Nawab Pur Road, Multan</div>
+              </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/samreen-fiaz-524ba53b6/" target="_blank" rel="noopener noreferrer" class="contact-channel-card" title="View LinkedIn Profile">
+              <div class="channel-icon" aria-hidden="true" style="color: #0A66C2; background: rgba(10,102,194,0.12);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">LinkedIn Profile</div>
+                <div class="channel-value">linkedin.com/in/samreen-fiaz-524ba53b6</div>
+              </div>
+            </a>
+
+            <!-- References Notice -->
+            <div class="references-line">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>References available upon request.</span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-box">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; font-weight: 700;">Send a Direct Message</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Fill out this form to quickly open an email draft with your details.
+            </p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Ayesha Khan" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Your Email</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="e.g. ayesha@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject" class="form-label">Subject</label>
+                <input type="text" id="senderSubject" class="form-input" placeholder="Internship Opportunity / Project Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Message</label>
+                <textarea id="senderMessage" class="form-textarea" placeholder="Hello Samreen, I came across your portfolio and would like to connect regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message via Email
+              </button>
+
+              <div id="formStatusMsg" class="form-status-msg success">
+                Opening your email client with your message...
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       9. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.85rem;" aria-hidden="true">SF</div>
+        <div>
+          <span style="font-weight: 700; font-size: 0.95rem;">Samreen Fayyaz</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">BS Mathematics · BZU Multan</span>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Samreen Fayyaz. All rights reserved.
+      </div>
+
+      <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Back to top">
+        <span>Back to Top</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       10. LIGHTBOX MODAL FOR JOHN YOUNG INFOGRAPHIC
+       ========================================================================== -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Infographic Lightbox Zoom View">
+    <div class="lightbox-topbar">
+      <div class="lightbox-title">
+        John Young: A Pioneer in Space Exploration — Infographic Poster
+      </div>
+      <div class="lightbox-controls">
+        <button id="zoomOutBtn" class="lb-btn" title="Zoom Out" aria-label="Zoom Out">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <button id="zoomResetBtn" class="lb-btn" title="Reset Zoom" aria-label="Reset Zoom">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        </button>
+        <button id="zoomInBtn" class="lb-btn" title="Zoom In" aria-label="Zoom In">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <button id="closeLightboxBtn" class="lb-btn" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4);" title="Close Lightbox" aria-label="Close Lightbox">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="lightbox-canvas-area" id="lightboxCanvasArea">
+      <!-- EDIT HERE: File path images/john-young-infographic.jpg is used here -->
+      <img 
+        src="images/john-young-infographic.jpg" 
+        alt="John Young: A Pioneer in Space Exploration full infographic poster by Samreen Fayyaz" 
+        class="lightbox-full-img" 
+        id="lightboxImg"
+        onerror="this.style.display='none'; document.getElementById('lightboxSvgFallback').style.display='block';"
+      />
+
+      <!-- Fallback visual details if image file is still pending drop -->
+      <div id="lightboxSvgFallback" class="lightbox-svg-fallback">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.8rem; color: var(--accent-orange); margin-bottom: 0.5rem;">JOHN YOUNG: A PIONEER IN SPACE EXPLORATION</h2>
+          <h3 style="font-size: 1.2rem; color: var(--accent-teal);">Mathematics: The Key to Successful Missions</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Infographic Poster created in Canva by Samreen Fayyaz</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+          <h4 style="color: #FFFFFF; margin-bottom: 0.5rem;">Mathematical Formulas Highlighted in Poster:</h4>
+          <ul style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.88rem; list-style: none;">
+            <li>1. Speed: v = d / t</li>
+            <li>2. Distance: d = v × t</li>
+            <li>3. Newton's 2nd Law: F = ma</li>
+            <li>4. Gravitational Force: F = G (m₁m₂ / r²)</li>
+            <li>5. Orbital Velocity: v = √(GM / r)</li>
+            <li>6. Escape Velocity: v_e = √(2GM / r)</li>
+            <li>7. Fuel Usage: Total - Remaining</li>
+            <li>8. Kinetic Energy: KE = ½ mv²</li>
+            <li>9. Work Done: W = F × d</li>
+            <li>10. Time Period: T = 2π √(r³ / GM)</li>
+          </ul>
+        </div>
+        <p style="text-align: center; font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">
+          "The math brings you out here, and the experience lets you appreciate it." — John Young
+        </p>
+        <div style="text-align: center; font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-orange);">
+          <!-- EDIT HERE: Place your 'john-young-infographic.jpg' image in the '/images' directory -->
+          [To display your actual Canva poster, save 'john-young-infographic.jpg' in the 'images/' folder]
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       11. RESUME / CV MODAL
+       ========================================================================== -->
+  <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-label="Samreen Fayyaz Curriculum Vitae">
+    <div class="resume-dialog">
+      <div class="resume-dialog-header">
+        <div>
+          <h2 style="font-size: 1.25rem; font-weight: 700;">Curriculum Vitae — Samreen Fayyaz</h2>
+          <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-teal);">BS Mathematics Undergraduate</span>
+        </div>
+        <button id="closeResumeBtn" class="lb-btn" aria-label="Close CV Dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="resume-dialog-body" id="resumePrintArea">
+        <div style="border-bottom: 2px solid var(--accent-violet); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.2rem;">SAMREEN FAYYAZ</h1>
+          <div style="font-size: 0.95rem; font-weight: 600; color: var(--accent-orange); text-transform: uppercase;">
+            BS Mathematics Undergraduate | Entry-Level Candidate
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;">
+            <span>Phone: 0324 9335633</span>
+            <span>·</span>
+            <span>Email: samreenfayyaz82@gmail.com</span>
+            <span>·</span>
+            <span>Location: Chungi No. 5, Nawab Pur Road, Multan</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; color: var(--accent-teal); margin-bottom: 0.4rem; text-transform: uppercase; font-family: var(--font-mono);">
+            Career Objective
+          </h3>
+          <p style="font-size: 0.95rem;">
+            Motivated and hardworking BS Mathematics undergraduate seeking an entry-level opportunity to apply analytical thinking, strengthen practical skills, and gain professional experience. Interested in mathematics, programming, and digital design, with a willingness to learn new tools and contribute positively to a team.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; color: var(--accent-teal); margin-bottom: 0.6rem; text-transform: uppercase; font-family: var(--font-mono);">
+            Education
+          </h3>
+          <div style="margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>BS Mathematics</span>
+              <span style="color: var(--accent-orange);">Currently Studying (Undergraduate)</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.88rem;">Bahauddin Zakariya University (BZU), Multan</div>
+          </div>
+          <div style="margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Intermediate (Higher Secondary Education)</span>
+              <span style="color: var(--accent-violet);">Completed</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.88rem;">Higher Secondary Education</div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Matriculation (Secondary School Education)</span>
+              <span style="color: var(--accent-violet);">Completed</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.88rem;">Secondary School Education</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; color: var(--accent-teal); margin-bottom: 0.6rem; text-transform: uppercase; font-family: var(--font-mono);">
+            Skills
+          </h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.92rem;">
+            <li><strong>Canva & Digital Design:</strong> Create posters, social media posts, and simple visual designs.</li>
+            <li><strong>Photo Editing:</strong> Basic photo editing and visual enhancement.</li>
+            <li><strong>MS Word:</strong> Beginner-level document creation and formatting.</li>
+            <li><strong>Python:</strong> Beginner; currently learning independently.</li>
+            <li><strong>Computer Skills:</strong> Basic computer use, problem-solving, and willingness to learn new tools.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; color: var(--accent-teal); margin-bottom: 0.4rem; text-transform: uppercase; font-family: var(--font-mono);">
+            Personal Strengths
+          </h3>
+          <p style="font-size: 0.92rem;">
+            Hardworking and responsible · Quick learner · Problem-solving mindset · Interested in developing new skills
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <h3 style="font-size: 1.15rem; color: var(--accent-teal); margin-bottom: 0.4rem; text-transform: uppercase; font-family: var(--font-mono);">
+            Languages & References
+          </h3>
+          <p style="font-size: 0.92rem;">
+            <strong>Languages:</strong> Urdu, English<br />
+            <strong>References:</strong> Available upon request.
+          </p>
+        </div>
+      </div>
+
+      <div class="resume-dialog-footer">
+        <button id="printCvBtn" class="btn btn-primary" type="button" style="padding: 0.6rem 1.4rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------------------
+         1. THEME SWITCHING (Dark & Light Mode with System & LocalStorage)
+         ---------------------------------------------------------------------- */
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const themeIcon = document.getElementById('themeIcon');
+      
+      const sunIconPath = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+      const moonIconPath = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+      function getInitialTheme() {
+        const saved = localStorage.getItem('sf_theme');
+        if (saved) return saved;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('sf_theme', theme);
+        if (theme === 'light') {
+          themeIcon.innerHTML = moonIconPath;
+          themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
+        } else {
+          themeIcon.innerHTML = sunIconPath;
+          themeToggleBtn.setAttribute('title', 'Switch to Light Mode');
+        }
+      }
+
+      const currentTheme = getInitialTheme();
+      applyTheme(currentTheme);
+
+      themeToggleBtn.addEventListener('click', function () {
+        const nextTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        applyTheme(nextTheme);
+      });
+
+      /* ----------------------------------------------------------------------
+         2. MOBILE HAMBURGER MENU
+         ---------------------------------------------------------------------- */
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobileMenu() {
+        const isOpen = mobileMenu.classList.contains('is-open');
+        if (isOpen) {
+          mobileMenu.classList.remove('is-open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          mobileMenu.classList.add('is-open');
+          hamburgerBtn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      hamburgerBtn.addEventListener('click', toggleMobileMenu);
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileMenu.classList.remove('is-open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      /* ----------------------------------------------------------------------
+         3. HERO TYPING EFFECT
+         ---------------------------------------------------------------------- */
+      const phrases = [
+        "Mathematics Student",
+        "Canva Designer",
+        "Python Learner",
+        "Quick Learner"
+      ];
+      const typingTarget = document.getElementById('typingTarget');
+      let phraseIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+      const typeSpeed = 80;
+      const deleteSpeed = 45;
+      const holdTime = 2000;
+
+      function typeLoop() {
+        const currentPhrase = phrases[phraseIdx];
+
+        if (isDeleting) {
+          charIdx--;
+          typingTarget.textContent = currentPhrase.substring(0, charIdx);
+        } else {
+          charIdx++;
+          typingTarget.textContent = currentPhrase.substring(0, charIdx);
+        }
+
+        let nextTimeout = isDeleting ? deleteSpeed : typeSpeed;
+
+        if (!isDeleting && charIdx === currentPhrase.length) {
+          nextTimeout = holdTime;
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          nextTimeout = 400;
+        }
+
+        setTimeout(typeLoop, nextTimeout);
+      }
+
+      setTimeout(typeLoop, 600);
+
+      /* ----------------------------------------------------------------------
+         4. SCROLL REVEAL & ANIMATED SKILL BARS
+         ---------------------------------------------------------------------- */
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      const skillFills = document.querySelectorAll('.skill-bar-fill');
+
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+
+        // Skill Bars fill on scroll
+        const skillObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              const fill = entry.target;
+              const targetWidth = fill.getAttribute('data-progress') || '50';
+              fill.style.width = targetWidth + '%';
+              observer.unobserve(fill);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        skillFills.forEach(function (bar) {
+          skillObserver.observe(bar);
+        });
+      } else {
+        // Fallback for older browsers
+        revealElements.forEach(function (el) { el.classList.add('is-visible'); });
+        skillFills.forEach(function (bar) {
+          bar.style.width = (bar.getAttribute('data-progress') || '50') + '%';
+        });
+      }
+
+      /* ----------------------------------------------------------------------
+         5. BACK TO TOP BUTTON
+         ---------------------------------------------------------------------- */
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ----------------------------------------------------------------------
+         6. CONTACT FORM SUBMISSION (Opens mailto with inputs pre-filled)
+         ---------------------------------------------------------------------- */
+      const contactForm = document.getElementById('contactForm');
+      const formStatusMsg = document.getElementById('formStatusMsg');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('senderName').value.trim();
+          const email = document.getElementById('senderEmail').value.trim();
+          const subject = document.getElementById('senderSubject').value.trim();
+          const message = document.getElementById('senderMessage').value.trim();
+
+          const bodyContent = `Hello Samreen,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nSent via your portfolio website.`;
+          
+          const mailtoUri = `mailto:samreenfayyaz82@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyContent)}`;
+          
+          formStatusMsg.classList.add('success');
+          formStatusMsg.textContent = "Opening your email client to send your message to Samreen Fayyaz...";
+          formStatusMsg.style.display = "block";
+
+          setTimeout(function () {
+            window.location.href = mailtoUri;
+          }, 350);
+        });
+      }
+
+      /* ----------------------------------------------------------------------
+         7. LIGHTBOX MODAL FOR JOHN YOUNG INFOGRAPHIC
+         ---------------------------------------------------------------------- */
+      const lightboxModal = document.getElementById('lightboxModal');
+      const openPosterLightbox = document.getElementById('openPosterLightbox');
+      const openPosterBtn = document.getElementById('openPosterBtn');
+      const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const zoomInBtn = document.getElementById('zoomInBtn');
+      const zoomOutBtn = document.getElementById('zoomOutBtn');
+      const zoomResetBtn = document.getElementById('zoomResetBtn');
+      const lightboxCanvasArea = document.getElementById('lightboxCanvasArea');
+
+      let currentZoom = 1;
+
+      function openLightbox() {
+        lightboxModal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        currentZoom = 1;
+        applyZoom();
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+
+      function applyZoom() {
+        if (lightboxImg) {
+          lightboxImg.style.transform = `scale(${currentZoom})`;
+        }
+      }
+
+      if (openPosterLightbox) openPosterLightbox.addEventListener('click', openLightbox);
+      if (openPosterBtn) openPosterBtn.addEventListener('click', openLightbox);
+      if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
+
+      if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', function () {
+          currentZoom = Math.min(currentZoom + 0.25, 3);
+          applyZoom();
+        });
+      }
+
+      if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', function () {
+          currentZoom = Math.max(currentZoom - 0.25, 0.5);
+          applyZoom();
+        });
+      }
+
+      if (zoomResetBtn) {
+        zoomResetBtn.addEventListener('click', function () {
+          currentZoom = 1;
+          applyZoom();
+        });
+      }
+
+      // Close on backdrop click (outside image)
+      lightboxCanvasArea.addEventListener('click', function (e) {
+        if (e.target === lightboxCanvasArea) {
+          closeLightbox();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (lightboxModal.classList.contains('is-active')) closeLightbox();
+          if (resumeModal.classList.contains('is-active')) closeResume();
+        }
+      });
+
+      /* ----------------------------------------------------------------------
+         8. RESUME / CV MODAL & PRINT FUNCTIONALITY
+         ---------------------------------------------------------------------- */
+      const resumeModal = document.getElementById('resumeModal');
+      const downloadCvBtn = document.getElementById('downloadCvBtn');
+      const viewCvAltBtn = document.getElementById('viewCvAltBtn');
+      const closeResumeBtn = document.getElementById('closeResumeBtn');
+      const printCvBtn = document.getElementById('printCvBtn');
+
+      function openResume() {
+        resumeModal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeResume() {
+        resumeModal.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+
+      if (downloadCvBtn) downloadCvBtn.addEventListener('click', openResume);
+      if (viewCvAltBtn) viewCvAltBtn.addEventListener('click', openResume);
+      if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeResume);
+
+      resumeModal.addEventListener('click', function (e) {
+        if (e.target === resumeModal) {
+          closeResume();
+        }
+      });
+
+      if (printCvBtn) {
+        printCvBtn.addEventListener('click', function () {
+          window.print();
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
